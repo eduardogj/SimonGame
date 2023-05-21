@@ -1,0 +1,80 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    text-align: center;
+    background-color: #1A1A1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+  }
+
+  h1 {
+    position: absolute;
+    top: 15px;
+  }
+
+  .container {
+    display: block;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .btn {
+    margin: 5px;
+    display: inline-block;
+    height: 9rem;
+    width: 9rem;
+    border: 1px solid black;
+    border-radius: 20%;
+  }
+
+  .visor {
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    background-color:#1A1A1A;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .green {
+    border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+    background-color: #2BD148;
+  }
+
+  .yellow {
+    border-radius: 100% 0% 0% 100% / 0% 100% 0% 100% ;
+    background-color: #F4E127;
+  }
+
+  .red {
+    border-radius: 0% 100% 0% 100% / 100% 100% 0% 0% ;
+    background-color: #F54739;
+  }
+
+  .blue {
+    border-radius: 100% 0% 100% 0% / 0% 0% 100% 100% ;
+    background-color: #3D69D7;
+  }
+
+  .pressed {
+    box-shadow: 0 0 20px 15px white;
+  }
+
+  .fadeOut {
+    opacity: 0;
+  }
+
+  .game-over {
+    background-color: red;
+    opacity: 0.8;
+  }
