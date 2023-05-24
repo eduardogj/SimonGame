@@ -32,6 +32,7 @@ body {
     width: 9rem;
     border: 1px solid black;
     border-radius: 20%;
+    cursor: pointer;
   }
 
   .visor {
@@ -44,6 +45,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  .visor div {
+    display: grid;
+    place-content: center;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 12px;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
   }
 
   .green {
@@ -77,4 +89,23 @@ body {
   .game-over {
     background-color: red;
     opacity: 0.8;
+  }
+
+
+  @media (min-width: 990px) {
+    .btn {
+      height: 19rem;
+      width: 19rem;
+    }
+
+    .visor {
+      height: 17rem;
+      width: 17rem;
+    }
+
+    .visor div {
+      width: 14rem;
+      height: 14rem;
+      font-size: 2rem;
+    }
   }

@@ -8,9 +8,10 @@ let sequenciaJogador = [];
 let started = false;
 let level = 0;
 
-document.querySelector('h1').addEventListener('click', function(){
+document.querySelector('h3').addEventListener('click', function(){
     if (!started) {
-        document.getElementById('level-title').innerHTML = 'Level ' + level;
+        document.getElementById('level-number').innerHTML = 'Level ' + level;
+        document.getElementById('game-status').innerHTML = 'Atenção...'
         proxSequencia();
         started = true;
     }
@@ -44,7 +45,8 @@ function checarResposta(nivelAtual) {
       } else {
         tocarSom('wrong')
         animacaoErro()
-        document.getElementById('level-title').innerHTML = 'Game over:<br> Clique aqui para recomeçar.';
+        document.getElementById('game-status').innerHTML = 'Game over';
+        document.getElementById('level-number').innerHTML = '(✖╭╮✖)'
 
         novoJogo()
       }
@@ -56,7 +58,7 @@ function proxSequencia() {
     sequenciaJogador = []
     // Aumenta o nível cada vez que essa função for chamada
     level++;
-    document.getElementById('level-title').innerHTML = 'Level ' + level;
+    document.getElementById('level-number').innerHTML = 'Level ' + level;
     // Pega um número aleatório de 1 a 4
     let numAleatorio = Math.floor((Math.random() * 4));
     // O número aleatório é "convertido" em uma cor com base na posição númerica da array "botoes"
